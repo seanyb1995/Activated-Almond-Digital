@@ -15,7 +15,7 @@ $grey: #aaa;
 $orange: #f68a1e;
 $blue: #1fbaed;
 $l-grey: #f7f8f9;
-$black: #393939;
+$black: #000000;
 
 // heading font-family
 h1, h2, h3, a {
@@ -30,22 +30,27 @@ p, li {
 }
 
 // default font-size 
+// root font
+:root {
+  font-size: 16px;
+}
+
 // banner font
 h1 {
-  font-size: 48px; 
+  font-size: 3rem; 
 }
 
 h2 {
-  font-size: 36px; 
+  font-size: 2.25rem; 
 }
 // sub-heading font
 h3 {
-  font-size: 28px; 
+  font-size: 1.75rem; 
 }
 // body font
 p, ul, li {
-  font-size: 18px !important;
-  line-height: 1.5em !important;
+  font-size: 1.125rem !important;
+  line-height: 1.5rem !important;
 }
 // links font
 a {
@@ -65,5 +70,10 @@ a {
 
 // phone
 @media (min-width: 320px) and (max-width: 480px) {
-
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  p, li, a {
+    font-size: 0.9375rem !important;
+  }
 }

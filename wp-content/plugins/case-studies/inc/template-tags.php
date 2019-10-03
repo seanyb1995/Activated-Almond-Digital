@@ -17,7 +17,6 @@ if ( ! function_exists( 'case_studies' ) ) {
   );
   
   $case_studies = new WP_Query($args);
-  
   if( $case_studies->have_posts() ): ?>
     <?php while($case_studies->have_posts()): $case_studies->the_post(); ?>
       <?php if ($case_studies->current_post % 2 == 0): ?>

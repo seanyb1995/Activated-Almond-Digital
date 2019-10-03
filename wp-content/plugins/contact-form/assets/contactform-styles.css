@@ -5,7 +5,6 @@
     z-index: 1;
     text-align: center;
     margin: 0 auto;
-    height: 50vh;
     input, placeholder, button {
       font-family: 'DM Serif Display', serif;
     }

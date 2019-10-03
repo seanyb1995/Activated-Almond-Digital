@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About
+ * Template Name: Social Media Marketing
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -26,41 +26,35 @@ get_header();
         <!--banner heading-->
         <div class="text">
           <?php
-            post_content(121);
+            post_content(200);
           ?>
         </div>
       </section>
       <!--content-->
       <section class="content">
-        <!--about us heading-->
+        <!--social media heading-->
         <div class="sub-heading">
-          <h3>About us</h3>
+          <h3>Social Media</h3>
         </div>
-        <!--about content-->
-        <div class="about">
+        <!--social media marketing content-->
+        <div class="why-be-social">
           <?php
-            post_content(126);
+            post_content(156);
           ?>
         </div>
       </section>
-      <!-- content-->
-      <section class="communication">
-        <div class="find-us">
-          <h1>The Team.</h1>
-          <div class="square">
-            <?php
-              $post = 83;
-              if(has_post_thumbnail($post)){
-                the_post_thumbnail();
-              }
-            ?>	
-          </div>
-          <div class="tag">
-            <h3>Jason Hugh</h3>
-            <p>Founder</p>
-          </div>
+      <section class="case-studies">
+        <div class="features">
+          <?php
+            post_content(176);
+          ?>
         </div>
-        <?php contactform_box(); ?>
+      </section>
+      <!--contact-->
+      <section class="content">
+        <?php
+          contactautomation();
+        ?>
       </section>
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -35,7 +35,9 @@ get_header();
         <div class="sub-heading">
           <h3>Our Clients</h3>
         </div>
-        <?php case_studies(); ?>
+        <div class="studies">
+          <?php case_studies(); ?>
+        </div>
       </section>
       <!--content-->
       <section class="content">

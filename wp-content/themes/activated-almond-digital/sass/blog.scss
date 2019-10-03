@@ -1,0 +1,128 @@
+// blog page
+.blogs {
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  grid-template-rows: auto auto auto;
+  margin-top: 10em;
+  .sub-heading {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    z-index: 1;
+    position: relative;
+     h3 {
+        font-family: helvetica;
+        text-transform: uppercase;
+        color: #eee;
+        writing-mode: vertical-rl;
+        font-size: 6.7em;
+        height: auto;
+        position: absolute;
+        right: 0;
+        margin: 0;
+        padding: 0;
+       }
+    }
+  #filter {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    select {
+      padding: 12px 24px;
+      cursor: pointer;
+      option {
+        cursor: pointer
+      }
+    }
+    button {
+      padding: 12px 24px;
+      border: none;
+      background-color: $orange;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  #posts {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    z-index: 1;
+    .post {
+      margin-bottom: 10em;
+      .image {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 1000px;
+          height: 600px;
+        }
+      }
+      .text {
+        max-width: 75%;
+        margin: 0 auto;
+        h1 {
+          text-align: center;
+          a {
+            font-size: 4rem;
+            text-decoration: none;
+            color: black;
+            transition: all 0.2s ease-in;
+            mark {
+              background: url(https://andyhooke.co.uk/wp-content/uploads/2018/02/yellow-brushstroke.png);
+              background-repeat: no-repeat;
+              background-size: 100% 95%;
+              padding: 8px 0;
+              transition: all 0.2s ease-in;
+            }
+            mark:hover {
+              color: $blue;
+            }
+          }
+        }
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        a:hover {
+          color: $blue;
+        }
+        p {
+          mark {
+            background-color: #eee;
+          }
+        }
+        .tag {
+          display: flex;
+          align-items: center;
+          .thumbnail {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+            img {
+              height: 50px;
+              width: 50px;
+            }
+          }
+          h3 {
+            display: inline-block;
+            overflow: hidden;
+            font-size: 16px !important;
+          }
+          h3:nth-child(2) {
+            color: $orange;
+          }
+
+          h3:after {
+            content:"";
+            display: inline-block;
+            height: 20px;
+            vertical-align: bottom;
+            margin: 0 10px 0 10px;
+            border: 1px solid black;
+          }
+        }
+      }
+    }
+  }
+}

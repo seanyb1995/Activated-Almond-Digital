@@ -1,6 +1,6 @@
 //------------------------------------------------------home page animations--//
 jQuery(document).ready(function($) {
-  var $animation_elements = $('.site-header, .image, .text, .our-passion, .process, .our-services, .contact, .heading, .office, .general, .business, .social, .sub-heading');
+  var $animation_elements = $('.site-header, .image, .text, .our-passion, .process, .our-services, .contact, .heading, .office, .quick-links, .social, .business, .sub-heading');
   var $window = $(window);
 
   function check_if_in_view() {

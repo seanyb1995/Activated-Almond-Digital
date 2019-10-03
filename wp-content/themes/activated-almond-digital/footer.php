@@ -29,12 +29,28 @@
         ?>
       </span>
     </div>
-    <div class="general">
-      <!--general-->
+    <!--quick links-->
+    <div class="quick-links">
       <span>
         <?php
-          post_content(81);
+          post_content(284);
         ?>
+        <!--main navigation links-->
+        <?php
+        wp_nav_menu( array(
+          'theme_location' => 'menu-1',
+          'menu_id'        => 'primary-menu',
+        ) );
+        ?>
+      </span>
+    </div>
+    <!--social media-->
+    <div class="social">
+      <span>
+        <h3>Follow Us.</h3>
+          <?php
+            post_content(81);
+          ?> 
       </span>
     </div>
     <div class="business">
@@ -55,15 +71,11 @@
         </div>
       </span>
     </div>
-    <div class="social">
-      <ul>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-      </ul>
-      <p>&#169 2019 Activated Almond Digital. All Rights Reserved</p>
+    <!--rights reserved-->
+    <div class="rights">
+      <p>Copyright © 2019 Actiavted Almond Digital, Inc. All Rights Reserved.</p>
     </div>
+    <!--quick links-->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

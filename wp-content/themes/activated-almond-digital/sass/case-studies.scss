@@ -1,7 +1,8 @@
+// case studies
 .case-studies {
   display: grid;
-  grid-template-columns: 2fr 8fr 2fr;
-  grid-template-rows: 33vh auto auto auto; 
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: auto auto auto auto; 
   .sub-heading {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
@@ -12,7 +13,7 @@
       text-transform: uppercase;
       color: #eeeeee;
       writing-mode: vertical-rl;
-      font-size: 6.7em !important;
+      font-size: 6.7em;
       height: 7em;
       position: absolute;
       right: 0;
@@ -20,15 +21,15 @@
       padding: 0;
     }
   }
-  .left {
+  .studies {
     grid-column:  2 / span 1;
     grid-row: 2 / span 1;
     z-index: 1;
     position: relative;
     .image-l {
       img {
-        height: 500px;
-        width: 350px;
+        height: 600px;
+        width: 500px;
         float: left;
       }
     }
@@ -96,21 +97,16 @@
       display: inline-block;
       width: 49%;
     }
-  }
-  .right {
-    grid-column:  2 / span 1;
-    grid-row: 3 / span 1;
-    z-index: 1;
-    position: relative;
     .image-r {
       img {
-        height: 500px;
-        width: 350px;
+        height: 600px;
+        width: 500px;
         float: right;
       }
     }
     .text-l {
       vertical-align: top;
+      margin: auto 0;
       h3 {
         position: relative;
       }
@@ -176,7 +172,7 @@
   }
   .left,
   .right {
-    margin-bottom: 10em;
+    margin-bottom: 5em;
   }
 }
 
@@ -184,43 +180,40 @@
 // tablet
 @media (min-width: 768px) and (max-width: 1024px) {
   .case-studies {
-    grid-template-rows: 25vh auto auto auto;
-    padding: 2em;
-    .sub-heading {
-      grid-column: 1 / span 3;
-      grid-row: 1 / span 1;
-      h3 {
-        font-size: 3em !important;
-        writing-mode: horizontal-tb;
-        height: auto;
-        left: 0;
-        bottom: 1em;
-      }
-    }
-    .left {
-      .image-l {
-        img {
-          height: 450px;
-          width: 300px;
+    margin-top: 10em;
+    .studies {
+      .right {
+        .text-l,
+        .image-r {
+          display: block;
+          width: 100%;
+          height: 600px;
+        }
+        .image-r {
+          img {
+            float: left;
+          }
+        }
+        .tablet:after {
+          top: 50%;
+        }
+        h1 {
+          font-size: 44px !important;
         }
       }
-    }
-    .right {
-      .image-r {
-        img {
-          height: 450px;
-          width: 300px;         
+      .left {
+        .text-r,
+        .image-l {
+          display: block;
+          width: 100%;
+          height: 600px;
         }
-      }
-    }
-    .left,
-    .right {
-      grid-column: 1 / span 3;
-    }
-    .text-r,
-    .text-l {
-      h1 {
-        font-size: 30px !important;
+        .tablet:after {
+          top: 50%;
+        }
+        h1 {
+          font-size: 44px !important;
+        }
       }
     }
   }
@@ -229,33 +222,64 @@
 // mobile
 @media (min-width: 320px) and (max-width: 480px) {
   .case-studies {
-    .left {
-      .image-l,
-      .text-r {
-        width: 100%;
-        h1 {
-          font-size: 30px !important;
-        }
-      }
-      .image-l {
-        img {
-          height: 250px;
-          width: 350px;
-        }
+    margin-top: 10em;
+    .sub-heading {
+      grid-column: 1 /span 3;
+      grid-row: 1 / span 1;
+      h3 {
+        writing-mode: horizontal-tb;
+        position: relative;
+        height: auto;
+        font-size: 34px !important;
+        padding-left: 1em;
       }
     }
-    .right {
-      .image-r,
-      .text-l {
-        width: 100%;
-        h1 {
-          font-size: 30px !important;
+    .studies {
+      grid-column: 1 / span 3 !important;
+      padding: 2em;
+      .right {
+        .text-l,
+        .image-r {
+          display: block;
+          width: 100%;
+        }
+        .image-r {
+          height: 300px;
+          img {
+            float: left;
+            height: 300px;
+            width: 100%;
+          }
+        }
+        .tablet:after {
+          top: 50%;
+        }
+        .text-l {
+          h1 {
+            font-size: 27px !important;
+          }
         }
       }
-      .image-r {
-        img {
-          height: 250px;
-          width: 350px;
+      .left {
+        .text-r,
+        .image-l {
+          display: block;
+          width: 100%;
+        }
+        .image-l {
+          height: 300px;
+          img {
+            width: 100%;
+            height: 300px;
+          }
+        }
+        .tablet:after {
+          top: 50%;
+        }
+        .text-r {
+          h1 {
+            font-size: 27px !important;
+          }
         }
       }
     }
