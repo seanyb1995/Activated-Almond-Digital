@@ -4,6 +4,11 @@
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
   z-index: 1;
+  min-height: 100vh;
+  height: auto;
+  p {
+    margin-bottom: 3rem;
+  }
   span {
     display: inline-block;
     width: 33%;
@@ -90,10 +95,33 @@
     img {
       width: 500px;
       height: 500px;
+      animation: morph 5s ease-in-out infinite both alternate;
+    }
+  }
+  figure:first-child {
+    img {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  }
+  figure:nth-child(4) {
+    img {
+      border-radius: 63% 37% 50% 50% / 70% 21% 79% 30%;
+    }
+  }
+  figure:nth-child(5) {
+    img {
+      border-radius: 63% 37% 50% 50% / 40% 21% 79% 60%;
+    }
+  }
+  figure:nth-child(8) {
+    img {
+      border-radius: 64% 36% 54% 46% / 30% 63% 37% 70%;
     }
   }
   span {
     vertical-align: top;
+    min-height: 100vh;
+    height: auto;
     h3 {
         position: relative;
       }
@@ -125,27 +153,27 @@
       width: 102%;
       z-index: -1;
     }
-          a {
-        text-decoration: none;
-        color: black;
-        position: relative;
-        transition: all 0.3s ease;
-        float: right;
-      }
+    a {
+      text-decoration: none;
+      position: relative;
+      transition: all 0.3s ease;
+      color: $black;
+      float: right;
+    }
     a:before {
       position: absolute;
-      width: 30px;
-      height: 30px;
+      width: 36px;
+      height: 36px;
       border-radius: 25px;
-      right: -7px;
-      top: -3px;
+      right: -19px;
+      top: -4px;
       content: '';
       background: $blue;
       transition: all 0.3s;
       z-index: -1;
     }
     a:hover:before {
-      width: 115%;
+      width: 126%;
     }
     a:hover {
       color: white;

@@ -16,12 +16,20 @@ get_header();
       <section class="banner">
         <!--banner image-->
         <div class="image">
-          <?php
-						$post = 29;
-						if(has_post_thumbnail($post)){
-							the_post_thumbnail();
-						}
-					?>	
+          <div class="box">
+            <div class="spin-container">
+              <div class="shape">
+                <div class="bd">
+                  <?php
+                    $post = 121;
+                    if(has_post_thumbnail($post)){
+                      the_post_thumbnail();
+                    }
+                  ?>	
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!--banner heading-->
         <div class="text">

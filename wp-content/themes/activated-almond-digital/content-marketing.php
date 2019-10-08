@@ -16,12 +16,20 @@ get_header();
       <section class="banner">
         <!--banner image-->
         <div class="image">
-          <?php
-						$post = 29;
-						if(has_post_thumbnail($post)){
-							the_post_thumbnail();
-						}
-					?>	
+          <div class="box">
+            <div class="spin-container">
+              <div class="shape">
+                <div class="bd">
+                  <?php
+                    $post = 117;
+                    if(has_post_thumbnail($post)){
+                      the_post_thumbnail();
+                    }
+                  ?>	
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!--banner heading-->
         <div class="text">
@@ -37,7 +45,7 @@ get_header();
           <h3>Content</h3>
         </div>
         <!--social media marketing content-->
-        <div class="content-marketing">
+        <div class="what-is-content">
           <?php
             post_content(249);
           ?>

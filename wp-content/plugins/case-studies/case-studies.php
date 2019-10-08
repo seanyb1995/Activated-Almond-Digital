@@ -25,7 +25,9 @@ $case_studies_plugin_root_url = plugin_dir_url(__FILE__);
 * 0. Setup product post type and product taxonomy
 */
 require_once( $case_studies_plugin_root . 'inc/cpt-case-studies.php' );
+require_once( $case_studies_plugin_root . 'inc/tax-filter.php' );
 add_action('init', 'case_studies_post_type');
+add_action('init', 'case_study_filter_taxonomy');
 /*
  * 4. Template tags
  * Require our Template tags file which contains all the functions for our 

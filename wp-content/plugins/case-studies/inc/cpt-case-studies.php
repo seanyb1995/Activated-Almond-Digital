@@ -39,7 +39,7 @@ if(!function_exists('case_studies_post_type')){
 		'description'           => __( 'Content for each Case Study Item', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
-		'taxonomies'            => array( 'category' ),
+		'taxonomies'            => array( 'filter' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,

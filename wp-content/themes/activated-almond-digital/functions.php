@@ -209,3 +209,6 @@ function new_excerpt_more( $more ) {
     return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+add_action( 'wp_ajax_display_posts_contents', 'display_news_posts_callbck' );
+add_action( 'wp_ajax_nopriv_display_post_contents', 'display_news_posts_callbck' );

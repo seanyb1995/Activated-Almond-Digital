@@ -1,0 +1,180 @@
+//------------------------------------------------single case studies styles--//
+.single-case {
+  display: grid;
+  grid-template-columns: 1.5fr 9fr 1.5fr;
+  grid-template-rows: 10vh auto;
+  .case-banner {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    height: auto;
+    .text {
+      h4 {
+        font-family: roboto;
+        color: $orange;
+        font-size: 1.325rem;
+      }
+      ul {
+        margin-top: 4rem;
+        li {
+          text-decoration: none;
+          list-style: none;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin-bottom: 2rem;
+          .stat {
+            margin-right: 2rem;
+            span {
+              font-size: 3rem;
+              font-weight: 600;
+            }
+          }
+          p {
+            margin: 0;
+            padding: 0;
+            font-size: 1.325rem !important;
+          }
+        }
+      }
+    }
+    .text,
+    .image {
+      width: 49%;
+      display: inline-block;
+      img {
+        height: 500px;
+        width: 500px;
+        float: right;
+        border-radius: 70% 30% 34% 66% / 68% 32% 68% 32%;
+        animation: morph 5s ease-in-out infinite both alternate;
+      }
+    }
+  }
+  .objective {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    img {
+      height: 500px;
+      width: 500px;
+      float: left;
+      border-radius: 70% 30% 34% 66% / 68% 32% 68% 32%;
+      animation: morph 5s ease-in-out infinite both alternate; 
+    }
+    .image,
+    .text {
+      width: 49%;
+      display: inline-block;
+    }
+  }
+  .results {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: 2rem;
+      border-radius: 70% 30% 34% 66% / 68% 32% 68% 32%;
+      animation: morph 5s ease-in-out infinite both alternate; 
+    }
+  }
+}
+.other-cases {
+  display: grid;
+  grid-template-columns: 1.5fr 9fr 1.5fr;
+  padding: 1rem;
+  min-height: 100vh;
+  height: auto;
+  .sub-heading {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .other {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 1;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    a {
+      text-decoration: none;
+      .case {
+        text-align: center;
+        img {
+          width: 400px;
+          height: 400px;
+        }
+        h1 {
+          font-size: 48px;
+          text-decoration: none;
+          color: black;
+          position: relative;
+          display: inline-block;
+        }
+        h1:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: 50%;
+          left: -1%;
+          transform: translate(0,-50%);
+          width: 0;
+          height: 30%;
+          background: $orange;
+          width: 102%;
+          z-index: -1;
+        }
+        h4 {
+          font-family: Roboto, sans-serif;
+          font-size: 1.325rem;
+          color: $orange;
+        }
+      }
+    }
+    a:first-child {
+      .case {
+        img {
+          border-radius: 70% 30% 34% 66% / 68% 32% 68% 32%;
+        }
+      }
+    }
+    a:nth-child(2) {
+      .case {
+        img {
+          border-radius: 40% 60% 52% 48% / 54% 53% 47% 46%;
+        }
+      }
+    }
+    a:nth-child(3) {
+      .case {
+        img {
+          border-radius: 63% 37% 50% 50% / 40% 21% 79% 60% ;
+        }
+      }
+    }
+  }
+}

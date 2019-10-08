@@ -4,12 +4,13 @@
   display: grid;
   grid-template-columns: 4fr 4fr 4fr 4fr;
   grid-template-rows: auto auto auto;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   .image {
     grid-column: 1 / span 2;
     grid-row: 2 / span 1;
     z-index: 0;
-    margin: 0 auto;
+    margin: auto;
     img {
       height: 644px;
       width: auto;
@@ -49,7 +50,7 @@
       z-index: -1;
     }
     a:hover:before {
-      width: 130%;
+      width: 126%;
     }
     a:hover {
       color: white;
@@ -88,6 +89,7 @@
         color: #eeeeee;
         writing-mode: vertical-rl;
         font-size: 6.7rem;
+        min-height: 100vh;
         height: auto;
         position: absolute;
         right: 0;

@@ -6,7 +6,7 @@
   margin-top: 10em;
   .sub-heading {
     grid-column: 1 / span 1;
-    grid-row: 1 / span 2;
+    grid-row: 2 / span 2;
     z-index: 1;
     position: relative;
      h3 {
@@ -23,24 +23,60 @@
        }
     }
   #filter {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    margin: 0 auto;
+    margin-bottom: 10vh;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    z-index: 1;
+    position: relative;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #2c3e50;
+    overflow: hidden;
+    border-radius: .25em;
     select {
-      padding: 12px 24px;
-      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      outline: 0;
+      box-shadow: none;
+      border: 0 !important;
+      background: #2c3e50;
+      background-image: none;
+      transition: all 0.3s ease;
       option {
-        cursor: pointer
+        cursor: pointer;
       }
     }
-    button {
-      padding: 12px 24px;
-      border: none;
-      background-color: $orange;
-      color: white;
+    select::-ms-expand {
+      display: none;
+    }
+    select {
+      flex: 1;
+      padding: 0 .5em;
+      color: #fff;
       cursor: pointer;
     }
+  }
+  #filter::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #34495e;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  #filter:hover::after {
+    color: #f39c12;
   }
   #posts {
     grid-column: 2 / span 1;
@@ -49,8 +85,14 @@
     .post {
       margin-bottom: 10em;
       .image {
+        margin: 0 auto;
         display: flex;
         justify-content: center;
+        width: 600px;
+        height: 600px;
+        overflow: hidden;
+        border-radius: 70% 30% 34% 66% / 68% 32% 68% 32%;
+        animation: morph 5s ease-in-out infinite both alternate;
         img {
           width: 1000px;
           height: 600px;
@@ -77,6 +119,13 @@
               color: $blue;
             }
           }
+          mark {
+            background: url(https://andyhooke.co.uk/wp-content/uploads/2018/02/yellow-brushstroke.png);
+            background-repeat: no-repeat;
+            background-size: 100% 95%;
+            padding: 8px 0;
+            transition: all 0.2s ease-in;
+          }
         }
         a {
           text-decoration: none;
@@ -86,13 +135,28 @@
           color: $blue;
         }
         p {
+          a {
+            text-decoration: underline;
+            color: #33bddb;
+            font-family: Roboto;
+            cursor: pointer;
+            transition: all 0.2s ease-in;
+          }
+          a:hover {
+            color: black;
+          }
           mark {
-            background-color: #eee;
+            background: #eee;
           }
         }
+        img {
+          margin-top: 1rem;
+          width: 100%;
+          height: auto;
+          border-radius: 70% 30% 34% 66% / 68% 32% 68% 32%;
+          animation: morph 5s ease-in-out infinite both alternate;
+        }
         .tag {
-          display: flex;
-          align-items: center;
           .thumbnail {
             height: 50px;
             width: 50px;
@@ -120,6 +184,17 @@
             vertical-align: bottom;
             margin: 0 10px 0 10px;
             border: 1px solid black;
+          }
+        }
+      }
+      .follow-us {
+        max-width: 75%;
+        text-align: center;
+        margin: 0 auto;
+        p {
+          a {
+            text-decoration: underline;
+            cursor: pointer;
           }
         }
       }

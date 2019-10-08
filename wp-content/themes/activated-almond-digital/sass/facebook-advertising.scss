@@ -5,6 +5,8 @@
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
   z-index: 1;
+  min-height: 100vh;
+  height: auto;
   figure {
     width: 33%;
     display: inline-block;
