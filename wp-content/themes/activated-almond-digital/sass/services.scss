@@ -1,30 +1,30 @@
-// services
+// banner
 .banner {
-  .text {
-    h3 {
-      font-size: 3em;
-      margin: 0;
-      padding: 0;
-    }
-    p {
-      font-size: 20px !important;
-      font-family: "Roboto",sans-serif;
-      font-weight: 300 !important;
+  .image {
+    #service-svg {
+      img {
+        height: 600px!important;
+        width: auto !important;
+        margin-top: -100px;
+      }
     }
   }
 }
-
 .services {
   display: grid;
   grid-template-columns: 6fr 6fr;
   grid-template-rows: 10vh auto auto;
   position: relative;
   margin-bottom: 10em;
+  min-height: 100vh;
+  height: 1000px;
+  max-height: 1100px;
   .social-media-marketing {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
     z-index: 1;
     padding: 3em;
+    overflow: hidden;
     h3:before {
       font-family: "Font Awesome 5 Brands";
       content: "\f39f";
@@ -91,7 +91,8 @@
     grid-row: 2 / span 1;
     z-index: 1;
     padding: 3em;
-    background: #eee;
+    background: white;
+    overflow: hidden;
     h3:before {
       font-family: "Font Awesome 5 Brands";
       content: "\f09a";
@@ -126,7 +127,7 @@
       color: $blue;
       outline: 0;
       overflow: hidden;
-      background: #eee;
+      background: white;
       z-index: 1;
       cursor: pointer;
       transition:         0.1s ease-in;
@@ -160,7 +161,8 @@
     grid-row: 3 / span 1;
     z-index: 1;
     padding: 3em;
-    background: #eee;
+    background: white;
+    overflow: hidden;
     h3:before {
       font-family: "Font Awesome 5 Free";
       content: "\f15c";
@@ -195,7 +197,7 @@
       color: $blue;
       outline: 0;
       overflow: hidden;
-      background: #eee;
+      background: white;
       z-index: 1;
       cursor: pointer;
       transition:         0.1s ease-in;

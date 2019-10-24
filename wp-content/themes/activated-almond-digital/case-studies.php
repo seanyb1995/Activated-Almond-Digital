@@ -9,27 +9,20 @@
 
 get_header();
 ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
       <!--banner-->
       <section class="banner">
         <!--banner image-->
         <div class="image">
-          <div class="box">
-            <div class="spin-container">
-              <div class="shape">
-                <div class="bd">
-                  <?php
-                    $post = 144;
-                    if(has_post_thumbnail($post)){
-                      the_post_thumbnail();
-                    }
-                  ?>	
-                </div>
-              </div>
-            </div>
-          </div>
+          <a href="#">
+            <?php
+              $post = 144;
+              if(has_post_thumbnail($post)){
+                the_post_thumbnail();
+              }
+            ?>
+          </a>
         </div>
         <!--banner heading-->
         <div class="text">

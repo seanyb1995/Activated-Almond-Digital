@@ -1,5 +1,23 @@
 // facebook advertising page
-// social media marketing page
+// facebook background
+.facebook-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: -250px;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    -webkit-transform: translateX(-42%);
+    -ms-transform: translateX(-42%);
+    transform: translate(-52.5%,-5.5%);
+  }
+}
 // why be social
 .why-advertise-facebook {
   grid-column: 2 / span 1;

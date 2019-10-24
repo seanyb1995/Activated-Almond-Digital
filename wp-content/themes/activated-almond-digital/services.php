@@ -9,58 +9,63 @@
 
 get_header();
 ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
       <!--banner-->
       <section class="banner">
         <!--banner image-->
         <div class="image">
-          <div class="box">
-            <div class="spin-container">
-              <div class="shape">
-                <div class="bd">
-                  <?php
-                    $post = 109;
-                    if(has_post_thumbnail($post)){
-                      the_post_thumbnail();
-                    }
-                  ?>	
-                </div>
-              </div>
-            </div>
-          </div>
+          <a id="service-svg" href="#">
+            <?php
+              $post = 109;
+              if(has_post_thumbnail($post)){
+                the_post_thumbnail();
+              }
+            ?>	
+          </a>
         </div>
         <!--banner heading-->
         <div class="text">
-          <?php
-            post_content(109);
-          ?>
+          <div class="container">
+            <?php
+              post_content(109);
+            ?>
+          </div>
         </div>
+        <!--mouse scroll down prompt-->
+        <div class="mouse"></div>
       </section>
       <!--services-->
-      <section class="services">
-        <div class="social-media-marketing">
-          <?php
-            post_content(113);
-          ?>
+      <section class="our-services">
+        <!--our services heading-->
+        <div class="sub-heading">
+          <h3>Our Services</h3>
         </div>
-        <div class="facebook-advertising">
-          <?php
-            post_content(115);
-          ?>
-        </div>
-        <div class="content-marketing">
-          <?php
-            post_content(117);
-          ?>
+       <!--our services-->
+        <div class="service">
+          <div class="container">
+            <?php services(); ?>
+          </div>
+          <a id="service-button" href="#">Get to know us</a>
         </div>
       </section>
       <!--content-->
       <section class="content">
-        <?php
-          contactautomation();
-        ?>
+        <div class="contact-image">
+            <?php
+              $post = 411;
+              if(has_post_thumbnail($post)){
+                the_post_thumbnail();
+              }
+            ?>
+        </div>
+        <div class="get-in-touch">
+          <div class="wrap">
+            <h1>Talk to our experts about your requirements</h1>
+            <p>Contact us and know more about how our experts can help your business grow.</p>
+            <p><a href="https://activated-almond-digital-seanbuchanan1995351517.codeanyapp.com/contact">Enquire now</a></p>
+          </div>
+        </div>
       </section>
 		</main><!-- #main -->
 	</div><!-- #primary -->

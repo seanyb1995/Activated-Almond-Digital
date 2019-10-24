@@ -1,5 +1,23 @@
 // content marketing page
-// social media marketing page
+// content background
+.content-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: -250px;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    -webkit-transform: translateX(-42%);
+    -ms-transform: translateX(-42%);
+    transform: translate(-52%,-5.5%);
+  }
+}
 // why be social
 .what-is-content {
   grid-column: 2 / span 1;
@@ -103,25 +121,38 @@
       border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
   }
+  figure:nth-child(2):before {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: $blue;
+  }
   figure:nth-child(3) {
     img {
       border-radius: 63% 37% 50% 50% / 70% 21% 79% 30%;
     }
+  }
+  figure:nth-child(3):before {
+    border-radius: 63% 37% 50% 50% / 70% 21% 79% 30%;
+    background: $green;
   }
   figure:nth-child(6) {
     img {
       border-radius: 63% 37% 50% 50% / 40% 21% 79% 60%;
     }
   }
+  figure:nth-child(6):before {
+    border-radius: 63% 37% 50% 50% / 40% 21% 79% 60%;
+    background: $blue;
+  }
   figure:nth-child(7) {
     img {
       border-radius: 64% 36% 54% 46% / 30% 63% 37% 70%;
     }
   }
+  figure:nth-child(7):before {
+    border-radius: 64% 36% 54% 46% / 30% 63% 37% 70%;
+    background: $orange;
+  }
   span {
-    vertical-align: top;
-    min-height: 100vh;
-    height: auto;
     h3 {
         position: relative;
       }
@@ -178,13 +209,6 @@
     a:hover {
       color: white;
     }
-  }
-  figure {
-    text-align: center;
-  }
-  figure, span {
-    display: inline-block;
-    width: 49%;
   }
 }
 

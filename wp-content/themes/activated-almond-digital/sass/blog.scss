@@ -1,9 +1,41 @@
 // blog page
+// about background
+.blog-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translate(-0%, -0%);
+  }
+}
 .blogs {
   display: grid;
   grid-template-columns: 2fr 8fr 2fr;
   grid-template-rows: auto auto auto;
   margin-top: 10em;
+  .shape-1 {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+    z-index: -1;
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1500px;
+      height: auto;
+      transform: translate(22%, -48%);
+    }
+  }
   .sub-heading {
     grid-column: 1 / span 1;
     grid-row: 2 / span 2;
@@ -27,56 +59,75 @@
     margin-bottom: 10vh;
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
-    z-index: 1;
+    z-index: 9999;
     position: relative;
+  }
+  .custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  .select-selected {
+    color: black;
     width: 20em;
     height: 3em;
     line-height: 3;
-    background: #2c3e50;
+    background: #fff;
     overflow: hidden;
     border-radius: .25em;
-    select {
-      width: 100%;
-      height: 100%;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      -ms-appearance: none;
-      appearance: none;
-      outline: 0;
-      box-shadow: none;
-      border: 0 !important;
-      background: #2c3e50;
-      background-image: none;
-      transition: all 0.3s ease;
-      option {
-        cursor: pointer;
-      }
-    }
-    select::-ms-expand {
-      display: none;
-    }
-    select {
-      flex: 1;
-      padding: 0 .5em;
-      color: #fff;
-      cursor: pointer;
-    }
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 1rem;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
   }
-  #filter::after {
+  .select-selected::after {
     content: '\25BC';
     position: absolute;
     top: 0;
     right: 0;
     padding: 0 1em;
-    background: #34495e;
+    background: #eee;
     cursor: pointer;
     pointer-events: none;
     -webkit-transition: .25s all ease;
     -o-transition: .25s all ease;
     transition: .25s all ease;
   }
-  #filter:hover::after {
-    color: #f39c12;
+  .select-selected:hover::after {
+    color: $orange;
+  }
+  .select-items div,.select-selected {
+    padding-left: 1rem;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #fff;
+    overflow: hidden;
+    border-radius: .25em;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  .select-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  .select-hide {
+    display: none;
+  }
+  .select-items div:hover, .same-as-selected {
+    background-color: #eee;
   }
   #posts {
     grid-column: 2 / span 1;
@@ -88,14 +139,9 @@
         margin: 0 auto;
         display: flex;
         justify-content: center;
-        width: 600px;
-        height: 600px;
-        overflow: hidden;
-        border-radius: 70% 30% 34% 66% / 68% 32% 68% 32%;
-        animation: morph 5s ease-in-out infinite both alternate;
         img {
-          width: 1000px;
-          height: 600px;
+          width: 100%;
+          height: auto;
         }
       }
       .text {
@@ -104,6 +150,7 @@
         h1 {
           text-align: center;
           a {
+            font-family: DM Serif Display, San-serif;
             font-size: 4rem;
             text-decoration: none;
             color: black;

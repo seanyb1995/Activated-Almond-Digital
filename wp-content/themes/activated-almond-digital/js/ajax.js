@@ -1,18 +1,18 @@
 //-------------------------------------------------------------ajax requests--//
 jQuery(document).ready(function($) {
 //----------------------------------------------------------------blog posts--//    
-	$('#category').change(function(){
-		var filter = $('#filter');
-		$.ajax({
-			url:filter.attr('action'),
-			data:filter.serialize(), // form data
-			type:filter.attr('method'), // POST
-			success:function(data){
-				$('#posts').html(data); // insert data
-			}
-		});
-		return false;
-	});
+// 	$('#category').change(function(){
+// 		var filter = $('#filter');
+// 		$.ajax({
+// 			url:filter.attr('action'),
+// 			data:filter.serialize(), // form data
+// 			type:filter.attr('method'), // POST
+// 			success:function(data){
+// 				$('#posts').html(data); // insert data
+// 			}
+// 		});
+// 		return false;
+// 	});
 	
   if (top.location.pathname === '/blog/'){
       /* magic ... */

@@ -141,6 +141,10 @@ function activated_almond_digital_scripts() {
   
   wp_enqueue_script( 'ajax', get_template_directory_uri() . '/js/ajax.js', array('jquery'), '20190720', true );
   
+  wp_enqueue_script( 'dropdown', get_template_directory_uri() . '/js/dropdown.js', array('jquery'), '20190720', true );
+  
+  wp_enqueue_script( 'scroll', get_template_directory_uri() . '/js/scroll.js', array('jquery'), '20190720', true );
+    
 	wp_enqueue_script( 'activated-almond-digital-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

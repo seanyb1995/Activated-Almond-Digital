@@ -1,11 +1,37 @@
 // social media marketing page
+// social background
+.social-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: -250px;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    -webkit-transform: translateX(-42%);
+    -ms-transform: translateX(-42%);
+    transform: translate(-53%, -6%);
+  }
+}
 // why be social
 .why-be-social {
   grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
+  grid-row: 2 / span 2;
   z-index: 1;
-  min-height: 100vh;
+  min-height: 800px;
   height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
   p {
     margin-bottom: 3rem;
   }
@@ -13,8 +39,11 @@
     display: inline-block;
     width: 33%;
     float: left;
+    h3 {
+      padding-left: 0.5rem
+    }
     p {
-      padding: 1em;
+      padding: 1rem;
     }
   }
   span:nth-child(3) {
@@ -85,106 +114,141 @@
 }
 
 // features
-.features {
-  grid-column:  2 / span 1;
-  grid-row: 2 / span 1;
-  z-index: 1;
-  position: relative;
-  margin-top: 10em;
-  .wp-block-image {
-    img {
-      width: 500px;
-      height: 500px;
-      animation: morph 5s ease-in-out infinite both alternate;
+.case-studies {
+  .features {
+    grid-column:  2 / span 1;
+    grid-row: 1 / span 4;
+    z-index: 1;
+    position: relative;
+    margin-top: 10em;
+    .wp-block-image {
+      img {
+        width: 500px;
+        height: 500px;
+      }
     }
-  }
-  figure:first-child {
-    img {
+    figure:first-child {
+      img {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      }
+    }
+    figure:first-child:before {
       border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      background: $blue;
     }
-  }
-  figure:nth-child(4) {
-    img {
+    figure:nth-child(4) {
+      img {
+        border-radius: 63% 37% 50% 50% / 70% 21% 79% 30%;
+      }
+    }
+    figure:nth-child(4):before {
       border-radius: 63% 37% 50% 50% / 70% 21% 79% 30%;
+      background: $green;
     }
-  }
-  figure:nth-child(5) {
-    img {
+    figure:nth-child(5) {
+      img {
+        border-radius: 63% 37% 50% 50% / 40% 21% 79% 60%;
+      }
+    }
+    figure:nth-child(5):before {
       border-radius: 63% 37% 50% 50% / 40% 21% 79% 60%;
+      background: $blue;
     }
-  }
-  figure:nth-child(8) {
-    img {
+    figure:nth-child(8) {
+      img {
+        border-radius: 64% 36% 54% 46% / 30% 63% 37% 70%;
+      }
+    }
+    figure:nth-child(8):before {
       border-radius: 64% 36% 54% 46% / 30% 63% 37% 70%;
     }
-  }
-  span {
-    vertical-align: top;
-    min-height: 100vh;
-    height: auto;
-    h3 {
-        position: relative;
-      }
-    h3:after {
-      position: absolute;
-      height: 1px;
-      width: 95px;
-      top: 50%;
-      background-color: black;
-      content: "";
-     }
-    h1 {
-      font-size: 48px;
-      text-decoration: none;
-      color: black;
-      position: relative;
-      display: inline-block;
+    figure:before {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 25px;
+        transform: translate(-9%, -9%);
+        content: '';
+        background: $orange;
+        transition: all 0.3s;
+        z-index: -1;
+        opacity: 0.2;
     }
-    h1:after {
-      position: absolute;
-      content: '';
-      display: block;
-      top: 50%;
-      left: -1%;
-      transform: translate(0,-50%);
-      width: 0;
-      height: 30%;
+    figure:even:before {
       background: $orange;
-      width: 102%;
-      z-index: -1;
     }
-    a {
-      text-decoration: none;
-      position: relative;
-      transition: all 0.3s ease;
-      color: $black;
-      float: right;
-    }
-    a:before {
-      position: absolute;
-      width: 36px;
-      height: 36px;
-      border-radius: 25px;
-      right: -19px;
-      top: -4px;
-      content: '';
+    figure:odd:before {
       background: $blue;
-      transition: all 0.3s;
-      z-index: -1;
     }
-    a:hover:before {
-      width: 126%;
+    span {
+      vertical-align: top;
+      min-height: 50vh;
+      height: 800px;
+      max-height: 1000px;
+      h3 {
+          position: relative;
+        }
+      h3:after {
+        position: absolute;
+        height: 1px;
+        width: 95px;
+        top: 50%;
+        background-color: black;
+        content: "";
+       }
+      h1 {
+        font-size: 48px;
+        text-decoration: none;
+        color: black;
+        position: relative;
+        display: inline-block;
+      }
+      h1:after {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 50%;
+        left: -1%;
+        transform: translate(0,-50%);
+        width: 0;
+        height: 30%;
+        background: $orange;
+        width: 102%;
+        z-index: -1;
+      }
+      a {
+        text-decoration: none;
+        position: relative;
+        transition: all 0.3s ease;
+        color: $black;
+        float: right;
+      }
+      a:before {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        border-radius: 25px;
+        right: -19px;
+        top: -4px;
+        content: '';
+        background: $blue;
+        transition: all 0.3s;
+        z-index: -1;
+      }
+      a:hover:before {
+        width: 126%;
+      }
+      a:hover {
+        color: white;
+      }
     }
-    a:hover {
-      color: white;
+    figure {
+      text-align: center;
     }
-  }
-  figure {
-    text-align: center;
-  }
-  figure, span {
-    display: inline-block;
-    width: 49%;
+    figure, span {
+      display: inline-block;
+      width: 49%;
+    }
   }
 }
 

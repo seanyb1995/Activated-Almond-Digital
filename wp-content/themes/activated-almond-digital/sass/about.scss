@@ -1,4 +1,23 @@
 // about
+// about background
+.about-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: -250px;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    -webkit-transform: translateX(-42%);
+    -ms-transform: translateX(-42%);
+    transform: translate(-53%, -10%);
+  }
+}
 .about {
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
@@ -116,7 +135,8 @@
   grid-template-rows: auto auto auto;
   margin-bottom: 10em;
   min-height: 100vh;
-  height: auto;
+  height: 1000px;
+  max-height: 1100px;
   display: flex;
   align-items: center;
   justify-content: center;

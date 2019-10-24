@@ -36,21 +36,25 @@ get_header();
             </div>
             <!--banner image-->
             <div class="image">
-              <?php the_post_thumbnail( array( 500,500) ); ?>
+              <span>
+                <?php the_post_thumbnail( array( 500,500) ); ?>
+              </span>
             </div>
           </div>
           <!--objective-->
           <div class="objective">
             <div class="image">
-              <?php 
+              <span>
+                <?php 
 
-              $image = get_field('objective_image');
+                $image = get_field('objective_image');
 
-              if( !empty($image) ): ?>
+                if( !empty($image) ): ?>
 
-                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
-              <?php endif; ?>
+                <?php endif; ?>
+              </span>
             </div>
             <div class="text">
                 <h3>Objective</h3>
@@ -61,15 +65,17 @@ get_header();
           <div class="results">
             <h3>Results</h3>
             <p><?php echo get_field('results'); ?></p>
-            <?php 
+            <span>
+              <?php 
 
-            $image = get_field('results_image');
+              $image = get_field('results_image');
 
-            if( !empty($image) ): ?>
+              if( !empty($image) ): ?>
 
-              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
-            <?php endif; ?>
+              <?php endif; ?>
+            </span>
         </div>
         <?php
         endwhile; // End of the loop.

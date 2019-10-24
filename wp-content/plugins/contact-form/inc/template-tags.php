@@ -1,21 +1,5 @@
 <?php
 
-if ( ! function_exists( 'contactautomation' ) ) {
-  function contactautomation() {
-
-  ?>
-  <div class="get-in-touch">
-    <h1><?php echo get_option( 'contactform_message' ); ?></h1>
-      <form action="<?php echo $contact_plugin_root_url; ?>/wp-content/plugins/contact-form/inc/contactform-add.php" method="post">
-        <input type="text" id="email" name="email" value="<?php echo $email; ?>" placeholder="Enter email here...">
-        <input type ="hidden" name="referer" value="<?php echo get_permalink() ?>">
-        <button id="submit" type ="submit" name="submit" value="submit">Send.</button>
-      </form>
-  </div>
-  <?php
-  }
-}
-
 if ( ! function_exists( 'contactform_box' ) ) {
   function contactform_box() {
   ?>

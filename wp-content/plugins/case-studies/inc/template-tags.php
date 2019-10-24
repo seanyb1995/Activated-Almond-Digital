@@ -72,7 +72,9 @@ function case_studies_filter_function() {
                   <a href="<?php the_permalink(); ?>">Read more.</a>
                 </div>
                 <div class="image-r">
-                 <?php the_post_thumbnail( array( 450,300) ); ?>
+                  <a href="<?php the_permalink(); ?>">
+                    <?php the_post_thumbnail( array( 450,300) ); ?>
+                  </a>
                 </div>
               </div>
           <?php $i++; ?>
@@ -80,7 +82,9 @@ function case_studies_filter_function() {
               <!--odd-->
               <div class="left">
                 <div class="image-l">
-                  <?php the_post_thumbnail( array( 450,300) ); ?>
+                  <a href="<?php the_permalink(); ?>">
+                    <?php the_post_thumbnail( array( 450,300) ); ?>
+                  </a>
                 </div>
                 <div class="text-r">
                   <h3><?php echo $i ?></h3>

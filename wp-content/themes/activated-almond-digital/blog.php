@@ -19,7 +19,7 @@ get_header();
           <h3>Our Stories</h3>
         </div>
         <!--filter-->
-        <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
+        <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" class="custom-select" id="filter">
           <?php
             if( $terms = get_terms( array( 'taxonomy' => 'category', 'orderby' => 'name' ) ) ) : 
 
