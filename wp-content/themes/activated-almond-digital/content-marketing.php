@@ -15,7 +15,7 @@ get_header();
       <section class="banner">
         <!--banner image-->
         <div class="image">
-          <a>
+          <a id="content-svg">
             <?php
               $post = 373;
               if(has_post_thumbnail($post)){
@@ -26,16 +26,18 @@ get_header();
         </div>
         <!--banner heading-->
         <div class="text">
-          <?php
-            post_content(245);
-          ?>
+          <div class="container">  
+            <?php
+              post_content(245);
+            ?>
+          </div>
         </div>
       </section>
       <!--content-->
       <section class="content">
         <!--social media heading-->
         <div class="sub-heading">
-          <h3>Content</h3>
+          <h3>Our Plan</h3>
         </div>
         <!--social media marketing content-->
         <div class="what-is-content">
@@ -45,17 +47,153 @@ get_header();
         </div>
       </section>
       <section class="case-studies">
-        <div class="features">
-          <?php
-            post_content(253);
-          ?>
+        <!--method 1-->
+        <div class="method-1">
+          <div class="image"> 
+            <div class="wrap">
+              <?php 
+
+              $image = get_field('image_1');
+
+              if( !empty($image) ): ?>
+
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+              <?php endif; ?>
+            </div>
+          </div>
+          <div class="text">
+            <div class="wrap">
+              <h1>
+                <?php
+                  $a = get_field_object('field_5db19197d3d51'); 
+                  echo $a['label']; 
+                ?>
+              </h1>
+              <p>
+                <?php 
+                  $a = get_field_object('field_5db19197d3d51'); 
+                  echo $a['value']; 
+                ?>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--method 2-->
+        <div class="method-2">
+          <div class="text">
+            <div class="wrap">
+              <h1>
+                <?php
+                  $a = get_field_object('field_5db194e195030'); 
+                  echo $a['label']; 
+                ?>
+              </h1>
+              <p>
+                <?php 
+                  $a = get_field_object('field_5db194e195030'); 
+                  echo $a['value']; 
+                ?>
+              </p>
+            </div>
+          </div>
+          <div class="image"> 
+            <div class="wrap">
+              <?php 
+
+              $image = get_field('image_2');
+
+              if( !empty($image) ): ?>
+
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+              <?php endif; ?>
+            </div>
+          </div>
+        </div>
+        <!--method 3-->
+        <div class="method-3">
+          <div class="image"> 
+            <div class="wrap">
+              <?php 
+
+              $image = get_field('image_3');
+
+              if( !empty($image) ): ?>
+
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+              <?php endif; ?>
+            </div>
+          </div>
+          <div class="text">
+            <div class="wrap">
+              <h1>
+                <?php
+                  $a = get_field_object('field_5db194eb01351'); 
+                  echo $a['label']; 
+                ?>
+              </h1>
+              <p>
+                <?php 
+                  $a = get_field_object('field_5db194eb01351'); 
+                  echo $a['value']; 
+                ?>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--method 4-->
+        <div class="method-4">
+          <div class="text">
+            <div class="wrap">
+              <h1>
+                <?php
+                  $a = get_field_object('field_5db194fb1fa6e'); 
+                  echo $a['label']; 
+                ?>
+              </h1>
+              <p>
+                <?php 
+                  $a = get_field_object('field_5db194fb1fa6e'); 
+                  echo $a['value']; 
+                ?>
+              </p>
+              <p><a href="#">Find out more</a></p>
+            </div>
+          </div>
+          <div class="image"> 
+            <div class="wrap">
+              <?php 
+
+              $image = get_field('image_4');
+
+              if( !empty($image) ): ?>
+
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+              <?php endif; ?>
+            </div>
+          </div>
         </div>
       </section>
       <!--contact-->
       <section class="content">
-        <?php
-          contactautomation();
-        ?>
+        <div class="contact-image">
+            <?php
+              $post = 411;
+              if(has_post_thumbnail($post)){
+                the_post_thumbnail();
+              }
+            ?>
+        </div>
+        <div class="get-in-touch">
+          <div class="wrap">
+            <h1>Talk to our experts <br>about your requirements</h1>
+            <p>Contact us and know more about how our experts can help your business grow.</p>
+            <p><a href="https://activated-almond-digital-seanbuchanan1995351517.codeanyapp.com/contact">Enquire now</a></p>
+          </div>
+        </div>
       </section>
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -65,6 +65,11 @@ jQuery(document).ready(function($) {
         type:filter.attr('method'), // POST
         success:function(data){
           $('#posts').html(data); // insert data
+            if (jQuery(window).width() < 1200) {
+                $('#posts > .container-r > .right > .image-r').each(function() {
+                  $(this).siblings('#posts > .container-r > .right > .text-l').before(this);
+                });
+            }
         }
     });
   }

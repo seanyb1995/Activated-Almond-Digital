@@ -32,8 +32,6 @@ get_header();
             ?>
           </div>
         </div>
-        <!--mouse scroll down prompt-->
-        <div class="mouse"></div>
       </section>
       <!--services-->
       <section class="our-services">

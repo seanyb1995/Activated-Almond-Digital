@@ -37,9 +37,21 @@ get_header();
       </section>
       <!--content-->
       <section class="content">
-        <?php
-          contactautomation();
-        ?>
+        <div class="contact-image">
+            <?php
+              $post = 411;
+              if(has_post_thumbnail($post)){
+                the_post_thumbnail();
+              }
+            ?>
+        </div>
+        <div class="get-in-touch">
+          <div class="wrap">
+            <h1>Talk to our experts <br>about your requirements</h1>
+            <p>Contact us and know more about how our experts can help your business grow.</p>
+            <p><a href="https://activated-almond-digital-seanbuchanan1995351517.codeanyapp.com/contact">Enquire now</a></p>
+          </div>
+        </div>
       </section>
 		</main><!-- #main -->
 	</div><!-- #primary -->

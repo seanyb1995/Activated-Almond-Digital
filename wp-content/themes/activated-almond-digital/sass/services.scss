@@ -3,9 +3,10 @@
   .image {
     #service-svg {
       img {
-        height: 600px!important;
-        width: auto !important;
-        margin-top: -100px;
+        width: 90%;
+        height: auto;
+        z-index: 1;
+        transition: all 0.3s ease;
       }
     }
   }
@@ -229,58 +230,67 @@
 }
 
 // media queries
-// tablet
-@media (min-width: 768px) and (max-width: 1024px) {
-  .services {
-    .social-media-marketing {
-      grid-column: 1 / span 2;
-    }
-    .facebook-advertising {
-      grid-column: 1 / span 2;
-      grid-row: 3 / span 1;
-    }
-    .content-marketing {
-      grid-column: 1 / span 2;
-      grid-row: 4 / span 1;
-      background: white;
-      a {
-        background: white;
+// normal computer
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 1980px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  .banner {
+    .image {
+      #service-svg {
+        img {
+          width: 600px !important;
+          height: 600px !important;
+        }
       }
     }
-  }
+  } 
+}
+/* ----------- Non-Retina Screens ----------- */
+// laptop
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   .banner {
+    .image {
+      #service-svg {
+        img {
+          height: 400px!important;
+          width: auto !important;
+        }
+      }
+    }
+  } 
+}
+// tablet
+@media (min-width: 768px) and (max-width: 1024px) {
+   .banner {
+    .image {
+      #service-svg {
+        img {
+          margin-top: 150px !important;
+          width: 75% !important;
+        }
+      }
+    }
+  } 
 }
 
 // mobile
 @media (min-width: 320px) and (max-width: 480px) {
   .banner {
-    .text {
-      p {
-        font-size: 15px !important;
-        font-family: "Roboto",sans-serif;
-        br {
-          display: none;
+    .image {
+      #service-svg {
+        img {
+          margin-top: 150px !important;
+          width: 75% !important;
+          height: auto !important;
         }
       }
     }
-  }
-  .services {
-    .social-media-marketing {
-      grid-column: 1 / span 2;
-      grid-row: 2 / span 1; 
-    }
-    .facebook-advertising {
-      grid-column: 1 / span 2;
-      grid-row: 3 / span 1; 
-    }
-    .content-marketing {
-      grid-column: 1 / span 2;
-      grid-row: 4 / span 1; 
-      background: white;
-      a {
-        background: white;
-      }
-    }
-  }
+  } 
 }
 
 // animations

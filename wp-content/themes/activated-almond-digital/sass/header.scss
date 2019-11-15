@@ -16,7 +16,7 @@ body {
       justify-content: flex-start;
       -webkit-box-align: center;
       align-items: center;
-      width: 100%;
+      width: 90%;
       padding-right: 15px;
       padding-left: 15px;
       margin-right: auto;
@@ -162,6 +162,14 @@ body {
       }
     }
   }
+  header.in-view.slide-out {
+    	-webkit-animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	    animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  }
+  header.in-view.slide-in {
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
 }
 
 // side navigation
@@ -216,20 +224,35 @@ body {
 // media queries
 // tablet
 @media (min-width: 768px) and (max-width: 1024px) {
-  header {
+    header {
     .container {
+      width: 100% !important;
+      a {
+        left: 0 !important;
+        transform: translate(0,0) !important;
+      }
+      nav {
+        margin: 0 0 0 auto !important;
+      }
+    }
+  }
+  header {
+    background: white !important;
+    .container {
+      height: 100px !important;
       .custom-logo-link {
-        left: 50% !important;
-        transform: translate(-50%,10%);
         padding: 0px 0px !important;
         img {
-          height: 40px !important;
+          height: 75px !important;
         }
       }
       nav {
         border-bottom: 1px solid #E6EAEA;
         text-align: left !important;
         padding: 0px 0px !important;
+        a {
+          padding: 39px 35px !important;
+        }
         ul {
           li {
             display: none !important;
@@ -249,29 +272,44 @@ body {
 
 // mobile
 @media (min-width: 320px) and (max-width: 480px) {
-  header {
+      header {
     .container {
+      width: 100% !important;
+      a {
+        left: 0 !important;
+        transform: translate(0,0) !important;
+      }
+      nav {
+        margin: 0 0 0 auto !important;
+      }
+    }
+  }
+  header {
+    background: white !important;
+    .container {
+      height: 100px !important;
       .custom-logo-link {
-        left: 50% !important;
-        transform: translate(-25%,10%);
         padding: 0px 0px !important;
         img {
-          height: 40px !important;
+          height: 50px !important;
         }
       }
       nav {
         border-bottom: 1px solid #E6EAEA;
         text-align: left !important;
         padding: 0px 0px !important;
+        a {
+          padding: 39px 35px !important;
+        }
         ul {
           li {
             display: none !important;
           }
         }
-      }
-      .icon {
-        display: inline-block !important;
-        border-left: 1px solid #E6EAEA;
+        .icon {
+          display: inline-block !important;
+          border-left: 1px solid #E6EAEA;
+        }
       }
     }
   }

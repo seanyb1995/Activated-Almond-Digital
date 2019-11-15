@@ -53,55 +53,58 @@ function case_studies_filter_function() {
   
   $query = new WP_Query($args);
   if( $query->have_posts() ): ?>
-    <?php $i = 1; ?>
     <?php while($query->have_posts()): $query->the_post(); ?>
       <?php if ($query->current_post % 2 == 0): ?>
-              <div class="right">
-                <div class="text-l">
-                  <h3><?php echo $i ?></h3>
-                  <h1><?php the_title(); ?></h1>
-                  <h4><?php  
-                      $terms = get_the_terms( $post->ID, 'filter' );
-                      if ( !empty( $terms ) ){
-                          // get the first term
-                          $term = array_shift( $terms );
-                          echo $term->name;
-                      }
-                      ?></h4>
-                  <?php the_excerpt(); ?>
-                  <a href="<?php the_permalink(); ?>">Read more.</a>
-                </div>
-                <div class="image-r">
-                  <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail( array( 450,300) ); ?>
-                  </a>
+              <div class="container-r">
+                <div class="right">
+                  <div class="text-l">
+                    <div class="wrap">
+                      <h1><?php the_title(); ?></h1>
+                      <h4><?php  
+                          $terms = get_the_terms( $post->ID, 'filter' );
+                          if ( !empty( $terms ) ){
+                              // get the first term
+                              $term = array_shift( $terms );
+                              echo $term->name;
+                          }
+                          ?></h4>
+                      <?php the_content(); ?>
+                      <p><a href="<?php the_permalink(); ?>">Read more.</a></p>                         
+                    </div>
+                  </div>
+                  <div class="image-r">
+                    <a href="<?php the_permalink(); ?>">
+                      <?php the_post_thumbnail( array( 700,400) ); ?>
+                    </a>
+                  </div>
                 </div>
               </div>
-          <?php $i++; ?>
           <?php else: ?>
               <!--odd-->
-              <div class="left">
-                <div class="image-l">
-                  <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail( array( 450,300) ); ?>
-                  </a>
-                </div>
-                <div class="text-r">
-                  <h3><?php echo $i ?></h3>
-                  <h1><?php the_title(); ?></h1>
-                  <h4><?php  
-                      $terms = get_the_terms( $post->ID, 'filter' );
-                      if ( !empty( $terms ) ){
-                          // get the first term
-                          $term = array_shift( $terms );
-                          echo $term->name;
-                      }
-                      ?></h4>
-                  <?php the_excerpt(); ?>
-                  <a href="<?php the_permalink(); ?>">Read more.</a>
+              <div class="container-l">
+                <div class="left">
+                  <div class="image-l">
+                    <a href="<?php the_permalink(); ?>">
+                      <?php the_post_thumbnail( array( 700,400) ); ?>
+                    </a>
+                  </div>
+                  <div class="text-r">
+                    <div class="wrap">
+                      <h1><?php the_title(); ?></h1>
+                      <h4><?php  
+                          $terms = get_the_terms( $post->ID, 'filter' );
+                          if ( !empty( $terms ) ){
+                              // get the first term
+                              $term = array_shift( $terms );
+                              echo $term->name;
+                          }
+                          ?></h4>
+                      <?php the_content(); ?>
+                      <p><a href="<?php the_permalink(); ?>">Read more.</a></p>
+                    </div>
+                  </div>              
                 </div>
               </div>
-      <?php $i++; ?>
       <?php endif ?>
     <?php endwhile ?>
     <?php wp_reset_postdata(); ?>
@@ -134,17 +137,21 @@ if ( ! function_exists( 'case_studies_other' ) ) {
       <a href="<?php the_permalink(); ?>">
         <!--other-->
         <div class="case">
-          <?php the_post_thumbnail( array( 450,300) ); ?>
-          <h1><?php the_title(); ?></h1>
-          <h4><?php  
-          $terms = get_the_terms( $post->ID, 'filter' );
-          if ( !empty( $terms ) ){
-              // get the first term
-              $term = array_shift( $terms );
-              echo $term->name;
-          }
-          ?></h4>
-          <?php the_excerpt(); ?>
+          <div class="image">
+            <?php the_post_thumbnail( array( 450,300) ); ?>
+          </div>
+          <div class="text">
+            <h3><?php the_title(); ?></h3>
+            <h4><?php  
+            $terms = get_the_terms( $post->ID, 'filter' );
+            if ( !empty( $terms ) ){
+                // get the first term
+                $term = array_shift( $terms );
+                echo $term->name;
+            }
+            ?></h4>
+            <?php the_excerpt(); ?>
+          </div>
         </div>
       </a>
     <?php endwhile ?>

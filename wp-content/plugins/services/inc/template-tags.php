@@ -21,7 +21,7 @@ if ( ! function_exists( 'services' ) ) {
         <div class="block"> 
           <div class="shape">
             <i class="<?php            
-              $a = get_field_object('field_5da54866ba131'); 
+              $a = get_field_object('field_5db17cbce8f6c'); 
               echo $a['value'];
             ?>"></i>
           </div>

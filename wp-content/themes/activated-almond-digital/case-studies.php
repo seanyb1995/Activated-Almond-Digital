@@ -15,9 +15,9 @@ get_header();
       <section class="banner">
         <!--banner image-->
         <div class="image">
-          <a href="#">
+          <a id="case-svg">
             <?php
-              $post = 144;
+              $post = 11;
               if(has_post_thumbnail($post)){
                 the_post_thumbnail();
               }
@@ -26,15 +26,17 @@ get_header();
         </div>
         <!--banner heading-->
         <div class="text">
-          <?php
-            post_content(144);
-          ?>
+          <div class="container"> 
+            <?php
+              post_content(144);
+            ?>
+          </div>
         </div>
       </section>
       <!--services-->
       <section class="case-studies">
         <div class="sub-heading">
-          <h3>Our Clients</h3>
+<!--           <h3>Our Clients</h3> -->
         </div>
         <!--filter-->
         <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="form">
@@ -56,13 +58,27 @@ get_header();
           <input type="hidden" name="action" value="csfilter">
           </form>
         <!--posts-->
-        <div id="posts"></div>
+        <div class="case-post">
+          <div id="posts"></div>
+        </div>
       </section>
       <!--contact-->
       <section class="content">
-        <?php
-          contactautomation();
-        ?>
+        <div class="contact-image">
+            <?php
+              $post = 411;
+              if(has_post_thumbnail($post)){
+                the_post_thumbnail();
+              }
+            ?>
+        </div>
+        <div class="get-in-touch">
+          <div class="wrap">
+            <h1>Talk to our experts <br>about your requirements</h1>
+            <p>Contact us and know more about how our experts can help your business grow.</p>
+            <p><a href="https://activated-almond-digital-seanbuchanan1995351517.codeanyapp.com/contact">Enquire now</a></p>
+          </div>
+        </div>
       </section>
 		</main><!-- #main -->
 	</div><!-- #primary -->

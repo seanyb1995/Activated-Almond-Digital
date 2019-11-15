@@ -136,14 +136,16 @@ function activated_almond_digital_scripts() {
   wp_enqueue_script( 'case-studies-animations', get_template_directory_uri() . '/js/case-studies.js', array('jquery'), '20190725', true );
   
   wp_enqueue_script( 'hamburger', get_template_directory_uri() . '/js/hamburger.js', array('jquery'), '20190720', true );
-  
-  wp_enqueue_script( 'DOM', get_template_directory_uri() . '/js/dom.js', array('jquery'), '20190720', true );
-  
+    
   wp_enqueue_script( 'ajax', get_template_directory_uri() . '/js/ajax.js', array('jquery'), '20190720', true );
+
+  wp_enqueue_script( 'DOM', get_template_directory_uri() . '/js/dom.js', array('jquery'), '20190720', true );
   
   wp_enqueue_script( 'dropdown', get_template_directory_uri() . '/js/dropdown.js', array('jquery'), '20190720', true );
   
   wp_enqueue_script( 'scroll', get_template_directory_uri() . '/js/scroll.js', array('jquery'), '20190720', true );
+  
+  wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/waypoints.js', array('jquery'), '20190720', true );
     
 	wp_enqueue_script( 'activated-almond-digital-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -216,3 +218,14 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 add_action( 'wp_ajax_display_posts_contents', 'display_news_posts_callbck' );
 add_action( 'wp_ajax_nopriv_display_post_contents', 'display_news_posts_callbck' );
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );

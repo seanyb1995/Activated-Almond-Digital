@@ -1,21 +1,10 @@
 // contact
 .contact {
   display: grid;
-  grid-template-columns: 1fr 4fr 4fr 1fr;
+  grid-template-columns: 0.5fr 4fr 4fr 0.5fr;
   grid-template-rows: auto auto auto;
-  .shape-1 {
-    grid-column: 4 / span 1;
-    grid-row: 1 / span 1;
-    z-index: -1;
-    img {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 1500px;
-      height: auto;
-      transform: translate(22%, -48%);
-    }
-  }
+  background: url(/wp-content/themes/activated-almond-digital/images/svg/background.svg) no-repeat right top;
+  background-size: 1350px !important;
   .how-can-we-help {
     grid-column: 2 / span 2;
     grid-row: 4 / span 1;
@@ -23,6 +12,7 @@
     padding: 0 0 100px;
     .contaer {
       span {
+        text-align: center;
         h3 {
           color: black;
         }
@@ -103,7 +93,7 @@
     }
   }
  .contact-image {
-    grid-column: 2 / span 1;
+    grid-column: 3 / span 1;
     grid-row: 2 / span 2;
     z-index: 1;
     display: flex;
@@ -114,12 +104,14 @@
     height: 1000px;
     max-height: 1100px;
     img {
-      width: 750px;
-      height: 750px;
+      width: 90%;
+      height: auto;
+      z-index: 1;
+      transition: all 0.3s ease;
     }
   }
   .lets-talk {
-    grid-column: 3 / span 1;
+    grid-column: 2 / span 1;
     grid-row: 2 / span 2;
     z-index: 1;
     margin: 0 auto;
@@ -185,18 +177,66 @@
 }
 
 // media queries
+// normal computer 
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 1980px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .contact {
+      background-size: 850px !important; 
+    }
+  .contact-image {
+    img {
+      width: 750px;
+      height: 750px;
+    }
+  }
+}
+
+// laptop
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+  .contact {
+    background-size: 850px !important;
+    .contact-image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  } 
+}
 // tablet
 @media (max-width: 1024px) and (min-width: 768px){
   .contact {
-    .how-can-we-help {
-      grid-column: 1 / span 2;
-      grid-row: 2 / span 1;
-      margin: 0;
-      padding-left: 3.5em;
+    background-size: 850px !important; 
+    .contact-image {
+      grid-column: 1 / span 4;
+      grid-row: 1 / span 1; 
+      min-height: 750px;
+      height: 750px;
+      max-height: 1100px;
+      img {
+        width: 75%;
+        height: auto;
+      }
     }
     .lets-talk {
-      grid-column: 1 / span 2;
-      grid-row: 1 / span 1;
+      grid-column: 1 / span 4;
+      grid-row: 2 / span 1;
+      h1 {
+        text-align: center;
+      }
+    }
+    .how-can-we-help {
+      grid-column: 1 / span 4;
+      grid-row: 3 / span 1;
+      margin: 0;
+      padding-left: 0;
+      padding: 3rem;
     }
   }
 }
@@ -204,32 +244,37 @@
 // mobile
 @media (min-width: 320px) and (max-width: 480px) {
   .contact {
-    height: auto;
-    padding: 2em;
-    .how-can-we-help {
+    background-size: 615px !important; 
+    .contact-image {
       grid-column: 1 / span 4;
-      grid-row: 2 / span 1;
-      margin: 0;
+      grid-row: 1 / span 1; 
+      min-height: auto;
+      height: auto;
+      max-height: 1100px;
+      padding: 150px 0 0 0;
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
     .lets-talk {
-      grid-column: 1 / span 4;
-      grid-row: 1 / span 1;
-      form {
-        input {
-          margin: 0;
-          padding: 0;
-        }
-        .help {
-          input {
-            width: 120px;
-          }
-        }
+      grid-column: 2 / span 2;
+      grid-row: 2 / span 1;
+      margin-top: 50px;
+      h1 {
+        text-align: center;
       }
-      .links {
-        br {
-          line-height: 40px;
-        }
+    }
+    .how-can-we-help {
+      grid-column: 2 / span 2;
+      grid-row: 3 / span 1;
+      margin: 0;
+      padding-left: 0;
+      .container {
+        display: block;
       }
     }
   }
 }
+
+

@@ -38,15 +38,21 @@ get_header();
       </section>
       <!--content-->
       <section class="content">
+        <!--mouse scroll down prompt-->
+        <div class="prompt">
+          <div id="mouse" class="mouse"></div>
+        </div>
         <!--our passion heading-->
-        <div class="sub-heading">
+        <div name="scroll" class="sub-heading">
           <h3>Our passion</h3>
         </div>
         <!--our passion content-->
         <div class="our-passion">
-          <?php
-            post_content(57);
-          ?>
+          <div class="container">
+            <?php
+              post_content(57);
+            ?>
+          </div>
         </div>
         <!--our process content-->
         <!--our process image-->
@@ -59,7 +65,12 @@ get_header();
             ?>
         </div>
         <div class="process-image-right">
-          <img src="/wp-content/themes/activated-almond-digital/images/svg/process-illustration-right.svg" alt="process image right">
+          <?php
+            $post = 482;
+            if(has_post_thumbnail($post)){
+              the_post_thumbnail();
+            }
+          ?>
         </div>
         <!--our process text-->
         <div class="process">

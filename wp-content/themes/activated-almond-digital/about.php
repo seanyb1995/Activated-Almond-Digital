@@ -15,7 +15,7 @@ get_header();
       <section class="banner">
         <!--banner image-->
         <div class="image">
-          <a href="#">
+          <a id="about-svg">
             <?php
               $post = 121;
               if(has_post_thumbnail($post)){
@@ -26,9 +26,11 @@ get_header();
         </div>
         <!--banner heading-->
         <div class="text">
-          <?php
-            post_content(121);
-          ?>
+          <div class="container">
+            <?php
+              post_content(121);
+            ?>
+          </div>
         </div>
       </section>
       <!--content-->

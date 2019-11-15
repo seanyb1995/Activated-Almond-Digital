@@ -1,29 +1,21 @@
 // social media marketing page
-// social background
-.social-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  img {
-    position: absolute;
-    top: -250px;
-    left: 50%;
-    width: auto;
-    height: 100%;
-    -webkit-transform: translateX(-42%);
-    -ms-transform: translateX(-42%);
-    transform: translate(-53%, -6%);
+.banner {
+  .image {
+    #social-svg {
+      img {
+        width: 90%;
+        height: auto;
+        z-index: 1;
+        transition: all 0.3s ease;
+      }
+    }
   }
 }
 // why be social
 .why-be-social {
-  grid-column: 2 / span 1;
+  grid-column: 2 / span 2;
   grid-row: 2 / span 2;
   z-index: 1;
-  min-height: 800px;
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -115,144 +107,265 @@
 
 // features
 .case-studies {
-  .features {
-    grid-column:  2 / span 1;
-    grid-row: 1 / span 4;
+  .method-1 {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
     z-index: 1;
-    position: relative;
-    margin-top: 10em;
-    .wp-block-image {
-      img {
-        width: 500px;
-        height: 500px;
-      }
-    }
-    figure:first-child {
-      img {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-      }
-    }
-    figure:first-child:before {
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-      background: $blue;
-    }
-    figure:nth-child(4) {
-      img {
-        border-radius: 63% 37% 50% 50% / 70% 21% 79% 30%;
-      }
-    }
-    figure:nth-child(4):before {
-      border-radius: 63% 37% 50% 50% / 70% 21% 79% 30%;
-      background: $green;
-    }
-    figure:nth-child(5) {
-      img {
-        border-radius: 63% 37% 50% 50% / 40% 21% 79% 60%;
-      }
-    }
-    figure:nth-child(5):before {
-      border-radius: 63% 37% 50% 50% / 40% 21% 79% 60%;
-      background: $blue;
-    }
-    figure:nth-child(8) {
-      img {
-        border-radius: 64% 36% 54% 46% / 30% 63% 37% 70%;
-      }
-    }
-    figure:nth-child(8):before {
-      border-radius: 64% 36% 54% 46% / 30% 63% 37% 70%;
-    }
-    figure:before {
-        position: absolute;
-        width: 600px;
-        height: 600px;
-        border-radius: 25px;
-        transform: translate(-9%, -9%);
-        content: '';
-        background: $orange;
-        transition: all 0.3s;
-        z-index: -1;
-        opacity: 0.2;
-    }
-    figure:even:before {
-      background: $orange;
-    }
-    figure:odd:before {
-      background: $blue;
-    }
-    span {
-      vertical-align: top;
-      min-height: 50vh;
-      height: 800px;
-      max-height: 1000px;
-      h3 {
-          position: relative;
-        }
-      h3:after {
-        position: absolute;
-        height: 1px;
-        width: 95px;
-        top: 50%;
-        background-color: black;
-        content: "";
-       }
-      h1 {
-        font-size: 48px;
-        text-decoration: none;
-        color: black;
-        position: relative;
-        display: inline-block;
-      }
-      h1:after {
-        position: absolute;
-        content: '';
-        display: block;
-        top: 50%;
-        left: -1%;
-        transform: translate(0,-50%);
-        width: 0;
-        height: 30%;
-        background: $orange;
-        width: 102%;
-        z-index: -1;
-      }
-      a {
-        text-decoration: none;
-        position: relative;
-        transition: all 0.3s ease;
-        color: $black;
-        float: right;
-      }
-      a:before {
-        position: absolute;
-        width: 36px;
-        height: 36px;
-        border-radius: 25px;
-        right: -19px;
-        top: -4px;
-        content: '';
-        background: $blue;
-        transition: all 0.3s;
-        z-index: -1;
-      }
-      a:hover:before {
-        width: 126%;
-      }
-      a:hover {
-        color: white;
-      }
-    }
-    figure {
-      text-align: center;
-    }
-    figure, span {
-      display: inline-block;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 250px;
+    .image,
+    .text {
       width: 49%;
+    }
+    .image {
+      .wrap {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+       img {
+          width: 600px !important;
+          height: 600px !important;
+        }
+      }
+    }
+    .text {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      .wrap {
+        width: 75%;
+        h1 {
+          font-size: 2.625rem !important;
+          text-decoration: none;
+          color: black;
+          position: relative;
+          display: inline-block;
+        }
+        h1:after {
+          content: "";
+          position: absolute;
+          bottom: -25px;
+          left: 0;
+          height: 5px;
+          width: 68px;
+          background-color: $orange;
+        }
+      }
+    }
+  }
+  .method-2 {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 1;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    background: $l-grey;
+    .image,
+    .text {
+      width: 49%;
+    }
+    .image {
+      .wrap {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+       img {
+          width: 600px !important;
+          height: 600px !important;
+        }
+      }
+    }
+    .text {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      .wrap {
+        width: 75%;
+        h1 {
+          font-size: 2.625rem !important;
+          text-decoration: none;
+          color: black;
+          position: relative;
+          display: inline-block;
+        }
+        h1:after {
+          content: "";
+          position: absolute;
+          bottom: -25px;
+          left: 0;
+          height: 5px;
+          width: 68px;
+          background-color: $orange;
+        }
+      }
+    }
+  }
+  .method-3 {
+    grid-column: 1 / span 4;
+    grid-row: 3 / span 1;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    .image,
+    .text {
+      width: 49%;
+    }
+    .image {
+      .wrap {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+       img {
+          width: 600px !important;
+          height: 600px !important;
+        }
+      }
+    }
+    .text {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      .wrap {
+        width: 75%;
+        h1 {
+          font-size: 2.625rem !important;
+          text-decoration: none;
+          color: black;
+          position: relative;
+          display: inline-block;
+        }
+        h1:after {
+          content: "";
+          position: absolute;
+          bottom: -25px;
+          left: 0;
+          height: 5px;
+          width: 68px;
+          background-color: $orange;
+        }
+      }
+    }
+  }
+  .method-4 {
+    grid-column: 1 / span 4;
+    grid-row: 4 / span 1;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    background: $l-grey;
+    .image,
+    .text {
+      width: 49%;
+    }
+    .image {
+      .wrap {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+       img {
+          width: 600px !important;
+          height: 600px !important;
+        }
+      }
+    }
+    .text {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      .wrap {
+        width: 75%;
+        h1 {
+          font-size: 2.625rem !important;
+          text-decoration: none;
+          color: black;
+          position: relative;
+          display: inline-block;
+        }
+        h1:after {
+          content: "";
+          position: absolute;
+          bottom: -25px;
+          left: 0;
+          height: 5px;
+          width: 68px;
+          background-color: $orange;
+        }
+        p {
+          margin-top: 4rem;
+          display: inline-block;
+          transition: all .3s ease-in-out;
+          transform-origin: center;
+          a {
+            text-decoration: none;
+            color: #fff;
+            padding: 20px 36px;
+            background: $orange;
+            border-radius: 300px;
+            font-weight: 700;
+          }
+        }
+        p:nth-child(3):hover {
+          transform: scale(1.1);
+        }
+      }
     }
   }
 }
 
+
 // media queries
+// normal computer
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 1980px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  .banner {
+    .image {
+      #social-svg {
+        img {
+          width: 600px !important;
+          height: 600px !important;
+        }
+      }
+    }
+  } 
+}
+// laptop
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+  .banner {
+    .image {
+      #social-svg {
+        img {
+          width: 600px !important;
+          height: 600px !important;
+        }
+      }
+    }
+  } 
+}
 // tablet
 @media (min-width: 768px) and (max-width: 1024px) {
   .why-be-social {
@@ -262,16 +375,26 @@
     }
   }
   .case-studies {
-    .features {
-      margin-top: 0;
-      figure, span {
+    .method-1,
+    .method-2,
+    .method-3,
+    .method-4 {
+      flex-direction: column;
+      .image,
+      .text {
         width: 100%;
-        display: block;
       }
-      span {
-        h1 {
-          font-size: 43px !important;
+      .image {
+        padding: 2rem;
+        .wrap {
+          img {
+            width: 600px !important;
+            height: 600px !important;
+          }
         }
+      }
+      .text {
+        padding: 2rem;
       }
     }
   }
@@ -279,12 +402,39 @@
 
 // mobile
 @media (min-width: 320px) and (max-width: 480px) {
+  .banner {
+    .image {
+      #social-svg {
+        img {
+          margin-top: 150px !important;
+          width: 75% !important;
+          height: auto !important;
+        }
+      }
+    }
+  } 
   .why-be-social {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 4;
     padding: 2em;
+    text-align: center;
+    h3 {
+      font-size: 2rem !important;
+      text-align: center;
+      width: 100%;
+      padding: 2rem;
+    }
     span {
       width: 100%;
       display: block;
+      h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 2rem !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
       p {
         padding: 1em 0em 1em 0em;
       }
@@ -292,23 +442,34 @@
   }
   .case-studies {
     margin-top: 0;
-    .features {
-      grid-column: 1/span 3;
-      margin-top: 0;
-      padding: 2em;
-      figure, span {
+    .method-1,
+    .method-2,
+    .method-3,
+    .method-4 {
+      grid-column: 1 / span 3;
+      flex-direction: column;
+      .image,
+      .text {
         width: 100%;
-        display: block;
       }
-      span {
-        margin-bottom: 5em;
-        h1 {
-          font-size: 26px !important;
+      .image {
+        .wrap {
+          width: auto;
+          padding: 2rem;
+          img {
+            width: 90% !important;
+            height: auto !important;
+          }
         }
       }
-      .wp-block-image {
-        img {
-          height: auto;
+      .text {
+        .wrap {
+          width: auto;
+          padding: 2rem;
+          h1 {
+            text-align: center;
+            width: 100%;
+          }
         }
       }
     }
