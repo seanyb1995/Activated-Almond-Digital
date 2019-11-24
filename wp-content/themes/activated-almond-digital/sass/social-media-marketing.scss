@@ -308,22 +308,48 @@
           width: 68px;
           background-color: $orange;
         }
-        p {
-          margin-top: 4rem;
-          display: inline-block;
-          transition: all .3s ease-in-out;
+        button {
+          position: relative;
+          text-align: center;
+          text-decoration: none;
+          color: #fff;
+          padding: 21px 36px;
+          background: #f68a1e;
+          border-radius: 300px;
           transform-origin: center;
-          a {
-            text-decoration: none;
-            color: #fff;
-            padding: 20px 36px;
-            background: $orange;
-            border-radius: 300px;
-            font-weight: 700;
+          transition: all .3s ease-in-out;
+          font-weight: 700;
+          border: none;
+          cursor: pointer;
+          margin-top: 50px;
+
+          .label {
+            display: inline-block;
+            position: relative;
+
+            .icon {
+              position: absolute;
+              top: 50%;
+              right: -15px;
+              transform: translate(50%,-50%);
+              transition: all 0.3s ease;
+            }
+
+            .button-text {
+              font-size: 1rem;
+              width: 100%;
+            }
+
           }
+
         }
-        p:nth-child(3):hover {
-          transform: scale(1.1);
+
+        button:hover {
+
+          .icon {
+            right: -20px;
+          }
+
         }
       }
     }

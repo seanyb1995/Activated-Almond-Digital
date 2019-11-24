@@ -31,7 +31,7 @@ if ( ! function_exists( 'contactform_box' ) ) {
       </div>
       <br>
       <input type ="hidden" name="referer" value="<?php echo get_permalink() ?>">
-      <button id="submit" type ="submit" name="submit" value="submit">Send.</button>
+      <button id="submit" type ="submit" name="submit" value="submit">Send</button>
     </form>
     <div class="links">
       <p>Not sure what you need? We can help you figure it out!<br>
