@@ -13,8 +13,12 @@
 }
 .about {
   grid-column: 2 / span 2;
-  grid-row: 2 / span 1;
+  grid-row: 1 / span 1;
   z-index: 1;
+  margin: 100px 0 100px 0;
+  h3:first-child {
+    margin-top: 0;
+  }
   h3:nth-child(3):before {
     font-family: "Font Awesome 5 Free";
     content: "\f06e";
@@ -320,12 +324,16 @@
       }
     }
   } 
+  .sub-heading {
+    padding: 0;
+  }
   .about {
     grid-column: 1 / span 4;
     grid-row: 3 / span 1;
     z-index: 0;
     padding: 2em;
     text-align: center;
+    margin: 0;
     h3 {
       font-size: 2rem !important;
       display: flex;
@@ -334,7 +342,11 @@
       flex-direction: column;
     }
     h3:before {
-      margin-right: 0;
+      margin-right: 0 !important;
+    }
+    h3:after {
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
     }
     p {
       padding: 0 !important;

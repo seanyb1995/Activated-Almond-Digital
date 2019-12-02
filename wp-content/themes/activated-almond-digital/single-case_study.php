@@ -124,7 +124,14 @@ get_header();
           <div class="wrap">
             <h1>Talk to our experts <br>about your requirements</h1>
             <p>Contact us and know more about how our experts can help your business grow.</p>
-            <p><a href="https://activated-almond-digital-seanbuchanan1995351517.codeanyapp.com/contact">Enquire now</a></p>
+            <button>
+              <span class="label">
+                <span class="text">Enquire now</span>
+                <span class="icon">
+                  <i class="fas fa-caret-right"></i>
+                </span>
+              </span>
+            </button>
           </div>
         </div>
       </section>

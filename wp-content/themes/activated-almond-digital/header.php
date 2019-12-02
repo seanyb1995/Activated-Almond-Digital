@@ -42,6 +42,17 @@
 			) );
 			?>
 		</nav><!-- #side-navigation -->
+      
+    <nav id="side-navigation" class="side-navigation">
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'side-menu',
+        'items_wrap' => '<ul id="%1$s" class="%2$s"><li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>%3$s</ul>',
+			) );
+			?>
+		</nav><!-- #side-navigation -->
+      
     </div><!-- container-->
 	</header><!-- #masthead -->
 

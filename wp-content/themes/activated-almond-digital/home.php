@@ -9,9 +9,7 @@
 
 get_header();
 ?>
-<!--   <div class="home-background">
-    <img src="/wp-content/themes/activated-almond-digital/images/shapes/home-background.svg" alt="background">
-  </div> -->
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
       <!--banner-->
@@ -33,18 +31,9 @@ get_header();
             <?php
               post_content(29);
             ?>
-            <!--contact-->
-            <form>
-              <input type="text" name="" placeholder="Enter your email to find our more."/>
-              <button>
-                <span class="label">
-                  <span class="text">Contact</span>
-                  <span class="icon">
-                    <i class="fas fa-caret-right"></i>
-                  </span>
-                </span>
-              </button>
-            </form>
+            <?php
+              post_content(539);
+            ?>
           </div>
         </div>
       </section>
@@ -95,7 +84,7 @@ get_header();
       <section class="our-services">
         <!--our services heading-->
         <div class="sub-heading">
-          <h3>How may we <br>serve you today?</h3>
+          <h3>Services</h3>
         </div>
        <!--our services-->
         <div class="service">
@@ -115,12 +104,14 @@ get_header();
       <!--contact-->
       <section class="content">
         <div class="contact-image">
+          <div class="wrap">
             <?php
               $post = 411;
               if(has_post_thumbnail($post)){
                 the_post_thumbnail();
               }
             ?>
+          </div>
         </div>
         <div class="get-in-touch">
           <div class="wrap">

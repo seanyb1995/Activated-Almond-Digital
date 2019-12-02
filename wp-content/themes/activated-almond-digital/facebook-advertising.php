@@ -12,7 +12,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
       <!--banner-->
-      <section class="banner">
+      <section class="banner smm">
         <!--banner image-->
         <div class="image">
           <a id="facebook-svg">

@@ -10,6 +10,7 @@ if ($(window).width() > 1200) {
          $('header').removeClass('slide-in');
          $('header').addClass('slide-out');
          $('header').css("background","white");
+         $('header nav ul li a').addClass('black');
      } else {
         // upscroll code
         $('header').removeClass('slide-out');
@@ -17,6 +18,7 @@ if ($(window).width() > 1200) {
      }
      if (st == 0){
         $('header').css("background","none");
+        $('header nav ul li a').removeClass('black');
      }
      lastScrollTop = st;
   });

@@ -12,7 +12,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
       <!--banner-->
-      <section class="banner">
+      <section class="banner smm">
         <!--banner image-->
         <div class="image">
           <a id="social-svg">
@@ -36,7 +36,7 @@ get_header();
       <!--content-->
       <section class="content">
         <!--social media heading-->
-        <div class="sub-heading">
+        <div class="sub-heading smm">
           <h3>Our Plan</h3>
         </div>
         <!--social media marketing content-->

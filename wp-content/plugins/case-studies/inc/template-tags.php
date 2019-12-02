@@ -69,14 +69,14 @@ function case_studies_filter_function() {
                           }
                           ?></h4>
                       <?php the_content(); ?>
-                      <button href="<?php the_permalink(); ?>">
+                      <a href="<?php the_permalink(); ?>">
                         <span class="label">
                           <span class="button-text">Read more</span>
                           <span class="icon">
                             <i class="fas fa-caret-right"></i>
                           </span>
                         </span>
-                      </button>                        
+                      </a>                        
                     </div>
                   </div>
                   <div class="image-r">
@@ -107,14 +107,14 @@ function case_studies_filter_function() {
                           }
                           ?></h4>
                       <?php the_content(); ?>
-                      <button href="<?php the_permalink(); ?>">
+                      <a href="<?php the_permalink(); ?>">
                         <span class="label">
                           <span class="button-text">Read more</span>
                           <span class="icon">
                             <i class="fas fa-caret-right"></i>
                           </span>
                         </span>
-                      </button>
+                      </a>
                     </div>
                   </div>              
                 </div>
